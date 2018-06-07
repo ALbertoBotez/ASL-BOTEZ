@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController, LoadingController, Loading, IonicPage } from 'ionic-angular';
 import { AuthService } from '../../providers/auth-service/auth-service';
-import {HelloIonicPage} from '../hello-ionic/hello-ionic';
+import { HelloIonicPage } from '../hello-ionic/hello-ionic';
+
 @IonicPage()
 @Component({
   selector: 'page-login',
@@ -11,8 +12,9 @@ export class LoginPage {
   loading: Loading;
   registerCredentials = { email: '', password: '' };
 
-  constructor(private nav: NavController, private auth: AuthService, private alertCtrl: AlertController, private loadingCtrl: LoadingController) { }
-
+  constructor(private nav: NavController, private auth: AuthService, private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
+  
+}
   public createAccount() {
     this.nav.push('RegisterPage');
   }
